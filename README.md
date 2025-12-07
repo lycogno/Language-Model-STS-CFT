@@ -17,14 +17,7 @@ We employ LoRA as our parameter-efficient fine-tuning technique in order to redu
 
 ## Fine-tuned Weights
 
-We have fine-tuned 3 models and we provide their LoRA adapter weights in [this Hugging Face 🤗 collection](https://huggingface.co/collections/trapoom555/small-lms-text-embedding-663b3ec87527788a577f6852). 
-
-The base models consist of
-1. MiniCPM-2B-dpo-bf16
-2. Gemma-2B-it
-3. Phi-2
-
-The performance and fine-tuning details can be seen in the Hugging Face model page.
+Unlike the original repository, we do not use LoRA as we are working with a small model, SmolLM.
 
 ## Dataset
 
