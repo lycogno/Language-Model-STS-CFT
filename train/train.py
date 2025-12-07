@@ -40,7 +40,6 @@ def main(model_args, data_args, training_args):
                                 train_dataset=train_dataset)
 
     trainer.accelerator.print(f"{trainer.model}")
-    trainer.model.print_trainable_parameters()
 
     # Train
     checkpoint = None

@@ -16,4 +16,4 @@ accelerate launch --config_file ./configs/ddp_config.yaml train.py \
 --lr_scheduler_type "cosine" \
 --save_strategy steps --save_steps 500 --seed 7 \
 --remove_unused_columns False \
---log_level info --logging_strategy steps --logging_steps 10 --report_to wandb \
+--log_level info --logging_strategy steps --logging_steps 10 --report_to none

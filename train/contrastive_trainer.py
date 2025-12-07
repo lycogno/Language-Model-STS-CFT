@@ -12,7 +12,7 @@ class ContrastiveTrainer(Trainer):
         out = model(**x, output_hidden_states=True).hidden_states[-1][:, -1, :]
         return out
     
-    def compute_loss(self, model, inputs, return_outputs=False):
+    def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         sent0 = {'input_ids': inputs.get('sent0_input_ids'),
                 'attention_mask': inputs.get('sent0_attention_mask')}
         sent1 = {'input_ids': inputs.get('sent1_input_ids'),
