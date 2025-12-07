@@ -5,8 +5,8 @@ class NLIPreprocess:
     def __init__(self, path):
         self.ds = load_dataset("csv", data_files=path)['train']
 
-        tokenizer_path = '../pretrained/MiniCPM-2B-dpo-bf16/'
-        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, local_files_only=True)
+        tokenizer_path = 'openbmb/MiniCPM-2B-dpo-bf16'
+        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, trust_remote_code=True)
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
         self._preprocess()
